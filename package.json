@@ -1,8 +1,5 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
-  "private": true,
-  "author": "Brunch",
+  "name": "tic-tac-toe",
   "version": "0.0.1",
   "repository": "",
   "scripts": {

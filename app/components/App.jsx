@@ -1,12 +1,10 @@
 import React from 'react';
-import Counter from './Counter';
+import Game from 'containers/Game';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div id="content">
-        <Counter />
-      </div>
+      <Game />
     );
   }
 }
