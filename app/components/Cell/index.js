@@ -1,10 +1,11 @@
 import React, { PropTypes } from 'react';
+import style from './style.scss';
 
 const Cell = ({ value, players, onClick }) => (
-  <div className="cell">
+  <div className={style.cell}>
     {!value?
       players.map((player, index) => 
-        <button className="player-btn" key={index} onClick={()=>onClick(player)}>
+        <button className={style.player} key={index} onClick={()=>onClick(player)}>
           {player}
         </button>
       )

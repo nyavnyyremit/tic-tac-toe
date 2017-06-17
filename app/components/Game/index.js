@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
+import style from './style.scss';
 import { connect } from 'react-redux';
 
-import Board from './Board';
-import GameOver from './GameOver';
+import Board from 'components/Board';
+import GameOver from 'components/GameOver';
 
 const Game = ({ board, players, winner, isDraw, onCellClick, onNewGame }) => (
-  <div className="game">
+  <div className={style.game}>
     {(winner || isDraw) &&
       <GameOver winner={winner} onNewGame={onNewGame} />
     }

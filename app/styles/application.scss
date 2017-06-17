@@ -9,37 +9,6 @@ button {
   cursor: pointer;
 }
 
-.game {
-  margin-top: 100px;
-  position: relative;
-  box-sizing: border-box;
-  padding: 20px;
-  background-color: rgba(0, 0, 255, 0.1);
-  border: 1px solid rgba(0,0,255,0.2);
-}
-
-.game-over {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,255,255,0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.congrats-block {
-  text-align: center;
-}
-
-.congrats-title {
-  font-size: 4rem;
-  color: rgba(0,0,255,0.6);
-  margin-bottom: 30px;
-}
-
 .primary-btn {
   font-size: 1.25rem;
   border: 0;
@@ -47,31 +16,5 @@ button {
   color: rgba(255,0,0,0.6);
   &:hover {
     color: rgba(255,0,0,0.9);
-  }
-}
-
-.row {
-  display: flex;
-}
-
-.cell {
-  $size: 100px;
-  width: $size;
-  height: $size;
-  margin: 5px;
-  font-size: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(0,0,255,0.2);
-}
-
-.player-btn {
-  flex-grow: 1;
-  height: 100%;
-  background-color: white;
-  border: 1px solid rgba(0,0,255,0.1);
-  &:hover {
-    background-color: rgba(0,0,255,0.1);
   }
 }

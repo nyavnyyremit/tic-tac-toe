@@ -1,11 +1,12 @@
 import React, { PropTypes } from 'react';
+import style from './style.scss';
 
-import Cell from './Cell';
+import Cell from 'components/Cell';
 
 const Board = ({ board, players, onCellClick }) => (
   <div>
     {board.map((row, index) =>
-      <div key={index} className="row">
+      <div key={index} className={style.row}>
         {row.map((value, jndex) =>
           <Cell key={jndex} value={value} players={players} onClick={(player) => onCellClick(index, jndex, player)} />
         )}

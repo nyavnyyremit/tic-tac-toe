@@ -7,6 +7,7 @@ exports.files = {
 
 exports.plugins = {
   babel: {presets: ['latest', 'react']},
+  sass: {modules: {ignore: [/application\.scss/,]}},
   postcss: {processors: [require('autoprefixer')]}
 };
 

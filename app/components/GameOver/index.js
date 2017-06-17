@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
+import style from './style.scss';
 
 const GameOver = ({ winner, onNewGame }) => (
-  <div className="game-over">
-    <div className="congrats-block">
-      <div className="congrats-title">
+  <div className={style.wrapper}>
+    <div className={style.content}>
+      <div className={style.title}>
         {winner?`${winner} won!`:`It's a draw`}
       </div>
       <button className="primary-btn" onClick={onNewGame}>

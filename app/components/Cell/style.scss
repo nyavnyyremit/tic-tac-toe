@@ -1,0 +1,21 @@
+.cell {
+  $size: 100px;
+  width: $size;
+  height: $size;
+  margin: 5px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,255,0.2);
+}
+
+.player {
+  flex-grow: 1;
+  height: 100%;
+  background-color: white;
+  border: 1px solid rgba(0,0,255,0.1);
+  &:hover {
+    background-color: rgba(0,0,255,0.1);
+  }
+}
