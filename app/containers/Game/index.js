@@ -8,8 +8,8 @@ Game.defaultProps = {
 }
 
 const mapStateToProps = state => {
-  const { board, winner, isDraw } = state.game;
-  return { board, winner, isDraw }
+  const { board, winner, finished } = state.game;
+  return { board, winner, finished }
 }
 
 const mapDispatchToProps = dispatch => {

@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import Board from 'components/Board';
 import GameOver from 'components/GameOver';
 
-const Game = ({ board, players, winner, isDraw, onCellClick, onNewGame }) => (
+const Game = ({ board, players, winner, finished, onCellClick, onNewGame }) => (
   <div className={style.game}>
-    {(winner || isDraw) &&
+    {finished &&
       <GameOver winner={winner} onNewGame={onNewGame} />
     }
     <Board board={board} players={players} onCellClick={onCellClick} />
@@ -17,7 +17,7 @@ const Game = ({ board, players, winner, isDraw, onCellClick, onNewGame }) => (
 Game.propTypes = {
   board: PropTypes.array.isRequired,
   winner: PropTypes.string,
-  isDraw: PropTypes.bool,
+  finished: PropTypes.bool,
   players: PropTypes.array.isRequired,
   onCellClick: PropTypes.func.isRequired,
   onNewGame: PropTypes.func.isRequired,
