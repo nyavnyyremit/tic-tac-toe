@@ -20,6 +20,8 @@
     "babel-preset-react": "~6.22",
     "brunch": "^2",
     "clean-css-brunch": "^2",
+    "postcss-brunch": "^2",
+    "autoprefixer": "^6",
     "uglify-js-brunch": "^2"
   }
 }
