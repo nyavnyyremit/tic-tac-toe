@@ -6,11 +6,16 @@ body {
 button {
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 
 .game {
   margin-top: 100px;
   position: relative;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: rgba(0, 0, 255, 0.1);
+  border: 1px solid rgba(0,0,255,0.2);
 }
 
 .game-over {
@@ -19,22 +24,31 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(255,255,255,0.9);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .congrats-block {
-  padding: 10px;
   text-align: center;
-  background-color: rgba(255,255,255,0.8);
 }
 
 .congrats-title {
-  font-size: 36px;
-  color: green;
-  margin-bottom: 10px;
+  font-size: 4rem;
+  color: rgba(0,0,255,0.6);
+  margin-bottom: 30px;
+}
+
+.primary-btn {
+  font-size: 1.25rem;
+  border: 0;
+  background: transparent;
+  color: rgba(255,0,0,0.6);
+}
+
+.primary-btn:hover {
+  color: rgba(255,0,0,0.9);
 }
 
 .row {
@@ -42,15 +56,23 @@ button {
 }
 
 .cell {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   margin: 5px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(0,0,255,0.2);
 }
 
 .player-btn {
   flex-grow: 1;
   height: 100%;
+  background-color: white;
+  border: 1px solid rgba(0,0,255,0.1);
+}
+
+.player-btn:hover {
+  background-color: rgba(0,0,255,0.1);
 }

@@ -6,7 +6,9 @@ const GameOver = ({ winner, onNewGame }) => (
       <div className="congrats-title">
         {winner?`${winner} won!`:`It's a draw`}
       </div>
-      <button onClick={onNewGame}>new game</button>
+      <button className="primary-btn" onClick={onNewGame}>
+        Start a new game
+      </button>
     </div>
   </div>
 )
