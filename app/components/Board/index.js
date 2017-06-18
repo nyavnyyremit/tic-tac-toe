@@ -1,14 +1,14 @@
-import React, { PropTypes } from 'react';
-import style from './style.scss';
+import React, { PropTypes } from 'react'
+import style from './style.scss'
 
-import Cell from 'components/Cell';
+import Cell from 'components/Cell'
 
 const Board = ({ board, players, onCellClick }) => (
   <div>
     {board.map((row, index) =>
       <div key={index} className={style.row}>
         {row.map((value, jndex) =>
-          <Cell key={jndex} value={value} players={players} onClick={(player) => onCellClick(index, jndex, player)} />
+          <Cell key={jndex} players={players} value={value} onClick={(player) => onCellClick(index, jndex, player)} />
         )}
       </div>
     )}
@@ -16,9 +16,9 @@ const Board = ({ board, players, onCellClick }) => (
 )
 
 Board.propTypes = {
-  board: PropTypes.array.isRequired,
-  players: PropTypes.array.isRequired,
+  board: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+  players: PropTypes.arrayOf(PropTypes.string).isRequired,
   onCellClick: PropTypes.func.isRequired,
 }
 
-export default Board;
+export default Board

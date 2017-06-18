@@ -1,9 +1,8 @@
-import React, { PropTypes } from 'react';
-import style from './style.scss';
-import { connect } from 'react-redux';
+import React, { PropTypes } from 'react'
+import style from './style.scss'
 
-import Board from 'components/Board';
-import GameOver from 'components/GameOver';
+import Board from 'components/Board'
+import GameOver from 'components/GameOver'
 
 const Game = ({ board, players, winner, finished, onCellClick, onNewGame }) => (
   <div className={style.game}>
@@ -15,12 +14,12 @@ const Game = ({ board, players, winner, finished, onCellClick, onNewGame }) => (
 )
 
 Game.propTypes = {
-  board: PropTypes.array.isRequired,
+  board: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
   winner: PropTypes.string,
   finished: PropTypes.bool,
-  players: PropTypes.array.isRequired,
+  players: PropTypes.arrayOf(PropTypes.string).isRequired,
   onCellClick: PropTypes.func.isRequired,
   onNewGame: PropTypes.func.isRequired,
 }
 
-export default Game;
+export default Game

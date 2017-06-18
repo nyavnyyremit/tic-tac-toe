@@ -1,11 +1,11 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import counterApp from './reducers';
-import App from 'components/App';
+import ReactDOM from 'react-dom'
+import React from 'react'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import counterApp from './reducers'
+import App from 'components/App'
 
-const store = createStore(counterApp);
+const store = createStore(counterApp)
 
 const load = () => {
   ReactDOM.render(
@@ -13,11 +13,11 @@ const load = () => {
       <App />
     </Provider>,
     document.querySelector('#app')
-  );
-};
+  )
+}
 
 if (document.readyState !== 'complete') {
-  document.addEventListener('DOMContentLoaded', load);
+  document.addEventListener('DOMContentLoaded', load)
 } else {
-  load();
+  load()
 }

@@ -1,14 +1,14 @@
-import { makeTurn, newGame } from './actions';
-import { connect } from 'react-redux';
+import { makeTurn, newGame } from './actions'
+import { connect } from 'react-redux'
 
-import Game from 'components/Game';
+import Game from 'components/Game'
 
 Game.defaultProps = {
   players: ['X', 'O']
 }
 
 const mapStateToProps = state => {
-  const { board, winner, finished } = state.game;
+  const { board, winner, finished } = state.game
   return { board, winner, finished }
 }
 

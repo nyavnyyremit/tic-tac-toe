@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import style from './style.scss';
+import React, { PropTypes } from 'react'
+import style from './style.scss'
 
 const Cell = ({ value, players, onClick }) => (
   <div className={style.cell}>
@@ -16,8 +16,8 @@ const Cell = ({ value, players, onClick }) => (
 
 Cell.propTypes = {
   value: PropTypes.string,
-  players: PropTypes.array.isRequired,
+  players: PropTypes.arrayOf(PropTypes.string).isRequired,
   onClick: PropTypes.func.isRequired,
 }
 
-export default Cell;
+export default Cell
